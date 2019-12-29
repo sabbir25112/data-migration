@@ -1,0 +1,30 @@
+{
+    "name": "sabbir25112/data-migration",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sabbir Ahmed",
+            "email": "sabbir25112@gmail.com"
+        }
+    ],
+    "require": {},
+    "description": "A Package for Laravel Data Migration",
+    "license": "MIT",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sabbir25112\\DataMigration\\DataMigrationServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sabbir25112\\DataMigration\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-package-install": [
+            "Sabbir25112\\DataMigration\\Installation::setupDataMigrationPath"
+        ]
+    }
+}
