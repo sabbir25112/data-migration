@@ -1,5 +1,6 @@
 <?php namespace Sabbir25112\DataMigration\Traits;
 
+use Sabbir25112\DataMigration\Installation;
 
 trait DataMigrationTrait
 {
@@ -10,6 +11,8 @@ trait DataMigrationTrait
      */
     protected function getMigrationPath()
     {
-        return $this->laravel->databasePath().DIRECTORY_SEPARATOR.'data_migrations';
+        $data_migration_path = $this->laravel->databasePath().DIRECTORY_SEPARATOR.'data_migrations';
+        Installation::setupDataMigrationPath($data_migration_path);
+        return $data_migration_path;
     }
 }

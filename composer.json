@@ -21,10 +21,5 @@
         "psr-4": {
             "Sabbir25112\\DataMigration\\": "src/"
         }
-    },
-    "scripts": {
-        "post-package-install": [
-            "Sabbir25112\\DataMigration\\Installation::setupDataMigrationPath"
-        ]
     }
 }
