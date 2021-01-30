@@ -33,7 +33,7 @@ class DataMigrationServiceProvider extends ServiceProvider
     protected function registerCreator()
     {
         $this->app->singleton('data.migration.creator', function ($app) {
-            return new DataMigrationCreator($app['files']);
+            return new DataMigrationCreator($app['files'], __DIR__.'/Stubs');
         });
     }
 
